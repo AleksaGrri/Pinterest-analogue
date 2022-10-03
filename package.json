@@ -1,0 +1,24 @@
+{
+  "name": "pinterest-analogue",
+  "version": "1.0.0",
+  "description": "1. Не забываем при каждом заходе в  vs code и созданием каких-либо изменений делать pull-merge в локальную ветку main, чтобы не было конфликтов, резолвить конфликты каждый будет сам за себя!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksaGrri/Pinterest-analogue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksaGrri/Pinterest-analogue/issues"
+  },
+  "homepage": "https://github.com/AleksaGrri/Pinterest-analogue#readme",
+  "dependencies": {
+    "parcel": "^2.7.0"
+  }
+}

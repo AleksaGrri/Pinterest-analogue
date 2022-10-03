@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.header-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.cards-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-container-search {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background: #EFEFEF;
+    padding: 10px 15px;
+    width: 65%;
+    gap: 15px;
+}
+
+.header-container-search input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #111111;
+    outline: none;
+}
+
+.header-container-search input:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+.header-container-search input::placeholder {
+    color: #767676;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.header-container-search:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: .3s;
+}
+
+.header-container-boards {
+    border-radius: 50px;
+    background: #EFEFEF;
+    padding: 10px 20px;
+}
+
+.header-container-boards select {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #111111;
+    padding-right: 35px;
+    outline: none;
+    border: none;
+    appearance: none;
+    background: url('./img/Dropdown\ Button.svg') no-repeat right;
+    color: #767676;
+}
+
+.header-container-logo img,
+.header-container-user img {
+    width: 60px;
+    height: 60px;
+}
+
+.cards-container-grid {
+    column-count: 5;
+}
+
+.cards-container-grid-card {
+    width: 266px;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cards-container-grid-card_descr-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #111111;
+    margin-top: 20px;
+}
+
+.cards-container-grid-card_descr-user {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.cards-container-grid-card_descr-user p {
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #111111;
+}
+
+.cards-container-grid-card_btn button {
+    background: #9D51FE;
+    border-radius: 51px;
+    border: none;
+    padding: 12px 30px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    top: 2%;
+    right: 4%;
+}
+
+
+.cards-container-grid-card_btn button:hover {
+    cursor: pointer;
+    background-color: #8D33FF;
+    box-shadow: 0px 4px 4px rgba(51, 24, 95, 0.2);
+    transition: .3s;
+}
+
+.cards-container-grid-card_btn button:focus {
+    cursor: pointer;
+    background-color: #7000FF;
+    box-shadow: 0px 4px 4px rgba(51, 24, 95, 0.2);
+    transition: .3s;
+}
