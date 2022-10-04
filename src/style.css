@@ -91,6 +91,18 @@ body {
     position: relative;
 }
 
+.cards-container-grid-card_image {
+    width: 266px;
+    height: fit-content;
+}
+
+.cards-container-grid-card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 .cards-container-grid-card_descr-title {
     font-weight: 700;
     font-size: 18px;
