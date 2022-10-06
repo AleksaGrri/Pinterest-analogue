@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pinterest</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-container-logo">
+                <a href=""><img src="./img/logo.svg" alt="logo"></a>
+            </div>
+            <div class="header-container-search">
+                <img src="./img/Search icon.svg" alt="search">
+                <input type="search" id="search" placeholder="Введите ваш запрос">
+            </div>
+            <div class="header-container-boards">
+                <select id="boards">
+                    <option selected>Выберите доску</option>
+                    <option value="1"><a href="">Картины</a></option>
+                    <option value="1"><a href="">Интерьер</a></option>
+                    <option value="1"><a href="">Собачки</a></option>
+                    <option value="1"><a href="">Добавить новую</a></option>
+                </select>
+            </div>
+            <div class="header-container-user">
+                <img src="./img/proffile.png" alt="user-photo">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="cards-container">
+            <div class="cards-container-grid" id="cards-container-grid">
+                <div class="cards-container-grid-card" id="card">
+                    <div class="cards-container-grid-card_btn">
+                        <button id="btn-card">Сохранить</button>
+                    </div>
+                    <img src="./img/Card Image.png" alt="card-image">
+                    <div class="cards-container-grid-card_descr">
+                        <div class="cards-container-grid-card_descr-title">
+                            Dell computer
+                        </div>
+                        <div class="cards-container-grid-card_descr-user">
+                            <img src="./img/Ellipse 2.png" alt="user">
+                            <p>Lili Reinhart</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+    <script src="./card-creator.js"></script>
+</body>
+
+</html>
