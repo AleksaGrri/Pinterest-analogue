@@ -1,8 +1,8 @@
-export function createInput ({type, value, placeholder, name}){
+export function createInput ({type, value, placeholder, id}){
     const root = document.createElement('input');
 
     root.type = type;
-    root.name = name;
+    root.id = id;
     root.value = value;
     root.placeholder = placeholder;
 
