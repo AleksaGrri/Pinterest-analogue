@@ -1,4 +1,4 @@
-import { getCards } from "./card-creator";
+
 
 const card = document.getElementById('card')
 const btn = document.getElementById('btn-card')

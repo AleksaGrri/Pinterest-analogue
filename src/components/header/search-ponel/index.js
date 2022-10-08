@@ -1,0 +1,1 @@
+export {getCardsForSearch} from './getCardsForSearch'

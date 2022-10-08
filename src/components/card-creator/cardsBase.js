@@ -1,5 +1,6 @@
-const URL = `https://633c1dc174afaef16402162d.mockapi.io/pinterest-cards-generator`;
+import {printCards} from './printCards'
 
+const URL = `https://633c1dc174afaef16402162d.mockapi.io/pinterest-cards-generator`;
 class CardsBase {
     // методы:
     constructor(data) {
@@ -21,7 +22,7 @@ class CardsBase {
 
 const cardsBase = new CardsBase();
 cardsBase.fetchCards().then(() => printCards(cardsBase.data));
-cardsBase.fetchCards().then(() => console.log(cardsBase.data[0].name));
+cardsBase.fetchCards().then(() => console.log(cardsBase.data));
 
 
 
