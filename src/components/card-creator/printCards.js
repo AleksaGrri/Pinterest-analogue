@@ -1,4 +1,4 @@
-function printCards(array) {
+export function printCards(array) {
     const cards = document.getElementById('cards-container-grid');
 
     for (let i = 0; i < array.length; i++) {
@@ -22,9 +22,10 @@ function printCards(array) {
         </div>
             `;
 
-        cards.append(card);
+        
         card.innerHTML = cardInner;
         card.classList.add("cards-container-grid-card");
+        cards.append(card);
     }
 }
 
