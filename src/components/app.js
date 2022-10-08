@@ -3,7 +3,8 @@ import { formLogIn } from "./header/log-in";
 import { getCardsForSearch } from "./header/search-ponel";
 
 
-export function App(){
+export function App() {
+    ``
     formLogIn()
     getCardsForSearch()
     getCards()
