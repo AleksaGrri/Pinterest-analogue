@@ -1,3 +1,5 @@
+import { users } from "../../dataBase"
+
 export function logInUser(){
     const mailUser = document.getElementById('mailUser')
     const password = document.getElementById('password')
