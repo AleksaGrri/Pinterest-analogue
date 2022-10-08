@@ -158,6 +158,149 @@ header {
     transition: .3s;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 70px 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 9px rgba(0, 0, 0, 0.19);
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+
+.form-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.form-subTitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #111111;
+    margin-bottom: 30px;
+}
+
+.form-name-user,
+.form-email,
+.form-password,
+.form-password-check,
+.form-error {
+    padding: 10px 15px;
+    border: 1px solid #C8C8C8;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #111111;
+    outline: none !important;
+    width: 64%;
+}
+
+.form-name-user,
+.form-email,
+.form-error {
+    background: url(./img/user.svg) no-repeat scroll 10px 7px;
+    padding-left: 40px;
+}
+
+.form-error {
+    border: 1px solid red;
+}
+
+.form-password,
+.form-password-check {
+    background: url(./img/lock.svg) no-repeat scroll 10px 7px;
+    padding-left: 40px;
+}
+
+.form-name-user:hover,
+.form-email:hover,
+.form-password:hover,
+.form-password-check:hover,
+.form-name-user:focus,
+.form-email:focus,
+.form-password:focus,
+.form-password-check:focus {
+    border: 1px solid #9D51FE;
+}
+
+.form-name-user::placeholder,
+.form-email::placeholder,
+.form-password::placeholder,
+.form-password-check::placeholder,
+.form-error::placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    color: #9E9E9E;
+}
+
+.form-btn-authorization {
+    width: 73%;
+    border: 2px solid #9D51FE;
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9D51FE;
+    font-weight: 700;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.form-btn-authorization:hover {
+    background-color: #9D51FE;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.form-btn-authorization:focus {
+    background-color: #7000FF;
+    border: 2px solid #7000FF;
+    transition: .3s;
+    color: rgb(208, 208, 208);
+}
+
+.form-label-subPanel {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 17px;
+    color: #111111;
+    margin-right: 15px;
+    text-align: end;
+}
+
+.form-link-subPanel {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 17px;
+    color: #9D51FE;
+    cursor: pointer;
+    font-style: italic;
+    text-align: end;
+}
+
+.form-rememberPassword {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #9D51FE;
+    cursor: pointer;
+    width: 70%;
+    text-align: end;
+}
+
+
+/* adaptive */
 @media(min-width: 2050px) {
     .cards-container-grid {
         column-count: 6;
@@ -168,6 +311,10 @@ header {
     .cards-container-grid {
         column-count: 4;
     }
+
+    .form-btn-authorization {
+        width: 73%;
+    }
 }
 
 @media(max-width: 1400px) {
@@ -175,6 +322,10 @@ header {
     .cards-container,
     .header-container {
         width: 90%;
+    }
+
+    .form-btn-authorization {
+        width: 75%;
     }
 }
 
@@ -199,6 +350,11 @@ header {
         column-count: 2;
         max-width: 80%;
         margin: 0 auto;
+    }
+
+    form {
+        width: 60%;
+        right: 9%;
     }
 }
 
@@ -225,12 +381,29 @@ header {
     .header-container-boards select {
         padding-right: 5px;
     }
+
+    form {
+        right: 6%;
+    }
 }
 
 @media(max-width: 650px) {
     .cards-container-grid {
         column-count: 2;
         max-width: 100%;
+    }
+
+    form {
+        right: 4%;
+    }
+}
+
+@media(max-width: 580px) {
+    form {
+        width: 75%;
+        padding: 50px 30px;
+        right: 8%;
+        top: 15%;
     }
 }
 
@@ -260,5 +433,10 @@ header {
 
     .cards-container-grid-card_descr {
         text-align: left;
+    }
+
+    form {
+        width: 77%;
+        right: 4%;
     }
 }

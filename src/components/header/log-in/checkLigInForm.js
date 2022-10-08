@@ -1,28 +1,25 @@
 import { users } from "../../dataBase"
 
-export function logInUser(){
+export function logInUser() {
     const mailUser = document.getElementById('mailUser')
     const password = document.getElementById('password')
 
-    if(mailUser.value.indexOf('@') === -1 || mailUser.value.indexOf('.') === -1){
-        mailUser.className = 'errorForm'
-        console.log('necorrect')
+    if (mailUser.value.indexOf('@') === -1 || mailUser.value.indexOf('.') === -1) {
+        mailUser.className = 'form-error';
+        mailUser.placeholder = 'Введите корректный Email'
     } else {
-     
+
         for (const iterator of users) {
-            if(iterator.email === mailUser.value){
-                if(iterator.password = password.value){
-                    console.log('uspex')
+            if (iterator.email === mailUser.value) {
+                if (iterator.password = password.value) {
                     break
                 } else {
-                    password.className = 'errorForm'
-                    console.log('necorrectpass')
+                    password.className = 'form-error'
                 }
             } else {
-                mailUser.className = 'errorForm'
+                mailUser.className = 'form-error'
                 password.value = ''
                 mailUser.value = ''
-                console.log('necorrectname')
             }
         }
     }
