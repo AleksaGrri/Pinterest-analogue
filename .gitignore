@@ -63,3 +63,4 @@ typings/
 dist/
 .cache/
 .parcel-cache
+src/components/card-creator/card-creator.js
