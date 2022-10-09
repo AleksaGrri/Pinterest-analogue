@@ -1,9 +1,11 @@
 import { logInForm, registrationForm } from "./typeForm";
 import { createForm } from "../../common/form/form";
 import {URL, getUsers} from './requestDataUsers'
+import { checkAuthorization } from "./itemProfile";
+import { closeForm } from "./closedFormClick";
 
 
 export function formLogIn(){
-    document.body.append(createForm(registrationForm))
-    getUsers().then(data => console.log(data))
+    checkAuthorization()
+    
 }

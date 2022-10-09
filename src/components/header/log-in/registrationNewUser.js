@@ -1,5 +1,7 @@
-import { users } from "../../dataBase"
 import { checkRegistrtionForm } from "./checkRegictrationForm"
+import { checkAuthorization } from "./itemProfile"
+import { URL } from "./requestDataUsers"
+
 
 export function registrationUser(){
     const nameUser = document.getElementById('nameUser').value
@@ -12,7 +14,15 @@ export function registrationUser(){
             password: passwordUser,
             name: nameUser,
         }
-        
-        users.push(newUser)
+        fetch(URL,{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+              },
+            body: JSON.stringify(newUser),
+        })
+        localStorage.setItem('isAuthorization', true) 
+        document.getElementById('form').remove()
+        checkAuthorization()
     }
 }

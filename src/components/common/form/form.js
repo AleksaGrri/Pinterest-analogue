@@ -39,7 +39,7 @@ export function createForm(typeForm) {
     linkSubPanel.innerText = typeForm.subPanel.textSubLink
     linkSubPanel.addEventListener('click', typeForm.subPanel.onClickSubLink)
     linkSubPanel.className = 'form-link-subPanel'
-
+    
     root.append(subPanel)
     return root
 }

@@ -1,6 +1,6 @@
 import { createForm } from "../../common/form/form"
-import { logInUser } from "./checkLigInForm"
-import { checkRegistrtionForm } from "./checkRegictrationForm"
+import { logInUser } from "./logInUser"
+import { registrationUser } from "./registrationNewUser"
 
 export const logInForm = {
     name: 'logInForm',
@@ -37,7 +37,7 @@ export const registrationForm = {
     ],
     button: {
         name: 'Зарегистрироваться',
-        onClick: checkRegistrtionForm,
+        onClick: registrationUser,
         className: 'form-btn-authorization',
     },
     subPanel: {
