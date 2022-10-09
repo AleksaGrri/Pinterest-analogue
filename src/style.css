@@ -98,12 +98,11 @@ header {
 
 .cards-container-grid-card_image {
     width: 266px;
-    height: fit-content;
+    height: auto;
 }
 
 .cards-container-grid-card_image img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -114,12 +113,22 @@ header {
     line-height: 20px;
     color: #111111;
     margin-top: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .cards-container-grid-card_descr-user {
     display: flex;
     align-items: center;
     margin-top: 5px;
+}
+
+.cards-container-grid-card_descr-user img {
+    border-radius: 50%;
 }
 
 .cards-container-grid-card_descr-user p {
