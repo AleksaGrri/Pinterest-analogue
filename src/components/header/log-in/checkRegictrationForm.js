@@ -1,5 +1,4 @@
 import { getUsers } from "./requestDataUsers"
-import { registrationForm } from "./typeForm"
 
 export function checkRegistrtionForm() {
     const nameUser = document.getElementById('nameUser')
@@ -11,11 +10,6 @@ export function checkRegistrtionForm() {
     mailUser.className ='form-email'
     password.className = 'form-password'
     passwordCheck.className = 'form-password-check'
-
-    nameUser.placeholder = registrationForm.inputs[0].placeholder
-    mailUser.placeholder = registrationForm.inputs[1].placeholder
-    password.placeholder = registrationForm.inputs[2].placeholder
-    passwordCheck.placeholder = registrationForm.inputs[3].placeholder
 
     if (!mailUser.value || mailUser.value.indexOf('@') === -1 || mailUser.value.indexOf('.') === -1) {
         mailUser.placeholder = 'Введите корректный Email'
@@ -46,7 +40,7 @@ export function checkRegistrtionForm() {
         passwordCheck.value = ''
         return false
     }
-    getUsers().then(data => {
+    return getUsers().then(data => {
         for (const iterator of data) {
             if(iterator.email === mailUser.value){
                 mailUser.placeholder = 'Данный email уже используется'
@@ -61,6 +55,4 @@ export function checkRegistrtionForm() {
             }
         }
     })
-
-    
 }

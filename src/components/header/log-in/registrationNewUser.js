@@ -7,7 +7,7 @@ export function registrationUser(){
     const nameUser = document.getElementById('nameUser').value
     const mailUser = document.getElementById('mailUser').value
     const passwordUser = document.getElementById('password').value
-
+    console.log(checkRegistrtionForm())
     if(checkRegistrtionForm()){
         const newUser = {
             email: mailUser,
