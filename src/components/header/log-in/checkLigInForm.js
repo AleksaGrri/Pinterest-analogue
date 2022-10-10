@@ -14,6 +14,8 @@ export function checkLogInUser(users) {
         for (const iterator of users) {
             if (iterator.email === mailUser.value) {
                 if (iterator.password === password.value) {
+                    localStorage.setItem('Email', iterator.email)
+                    localStorage.setItem('Name', iterator.name)
                     return true
                 } else {
                     password.className = 'form-error'
