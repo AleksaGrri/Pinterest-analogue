@@ -1,3 +1,5 @@
+import { getUsersBase } from "./get-userbase";
+
 const usersURL = `https://633c1dc174afaef16402162d.mockapi.io/pinterest-user-base`;
 
 class UsersBase {
@@ -10,11 +12,6 @@ class UsersBase {
         const response = await fetch(usersURL);
         const data = await response.json();
         this.data = data;
-    }
-
-    // отсчет индекса для подбора страницы
-    getCardsPage() {
-
     }
 
 }

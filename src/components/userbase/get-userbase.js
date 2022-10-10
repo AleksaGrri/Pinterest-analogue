@@ -1,7 +1,13 @@
-function getUsersBase(array) {
-    for (let i = 0; i < array.length; i++) {
-        console.log(`Login: ${array[i].name} Password: ${array[i].password}`);
-    }
+import { getUsers } from "../header/log-in/requestDataUsers";
+
+export function getUsersBase(array) {
+    // getUsers().then(data => {
+    //     for (let i = 0; i < data.length; i++) {
+    //         console.log(`Login: ${data[i].name} Password: ${data[i].password}`);
+    //     }
+    // })
+
 }
 
-usersBase.fetchUsers().then(() => getUsersBase(usersBase.data[0].password));
+console.log('подключен getusersbase');
+getUsersBase();
