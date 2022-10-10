@@ -1,13 +1,14 @@
 export function getCardsForSearch(data){
+
     let keywords = document.getElementById('search').value
     keywords = keywords.toLowerCase()
     keywords = keywords.split(' ');
     const resultSearch = [];
     let typeSearch = document.getElementById('typeSearch').value
-    
+    console.log(data)
     if(typeSearch === 'common'){
         for (const iterator of data) {
-            let keyCard = iterator.tag.toLowerCase()
+            let keyCard = iterator.dashboardName.toLowerCase()
             keyCard = keyCard.split(' ')
             const intersection = keywords.filter(item => keyCard.includes(item))
     
@@ -27,11 +28,6 @@ export function getCardsForSearch(data){
             resultSearch.push(iterator)
         }
     }
-
-    if(resultSearch.length === 0)
-        {
-            return false
-        }
 
     return resultSearch
 }

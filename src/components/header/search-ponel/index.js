@@ -6,11 +6,12 @@ import { errorSearch } from './notFindSearch'
 
 
 
-export function getResultSearch(){
+export async function getResultSearch(){
     const search = document.getElementById('search')
     search.addEventListener('keydown', function(event) {
         if(event.code === 'Enter'){
             updateContent()
+            if(search.value){
             cardsBase.fetchCards().then(() => {
                 if(getCardsForSearch(cardsBase.data)){
                 printCards(getCardsForSearch(cardsBase.data))
@@ -18,6 +19,9 @@ export function getResultSearch(){
                     errorSearch()
                 }
         })
+        } else { 
+            cardsBase.fetchCards().then(() => printCards(cardsBase.data));
         }
+    } 
     })
 } 
