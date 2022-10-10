@@ -18,7 +18,9 @@ export function checkAuthorization(){
        button.style.display = 'block'
 
        button.addEventListener('click', () => {
-        document.body.append(createForm(logInForm))
+        const form = document.getElementById('form')
+        if(form === null){
+        document.body.append(createForm(logInForm))}
         
     })
 }

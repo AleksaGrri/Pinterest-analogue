@@ -1,6 +1,8 @@
 import { createForm } from "../../common/form/form"
+import { changePassword } from "./changePassword"
 import { logInUser } from "./logInUser"
 import { registrationUser } from "./registrationNewUser"
+import { getFormRemeberPassword } from "./rememberPassword"
 
 export const logInForm = {
     name: 'logInForm',
@@ -50,3 +52,25 @@ export const registrationForm = {
         }
     },
 }
+
+export const remeberPassword = {
+    name: 'remeberPassword',
+    title: 'Востановление пароля',
+    subTitle: 'Пожалуйста, введитие данные для изменения пароля',
+    inputs: [
+        { type: 'text', value: '', placeholder: 'Почта', id: 'mailUser', className: 'form-email' },
+        { type: 'text', value: '', placeholder: 'Секретное слово', id: 'secretWord', className: 'form-email' },
+        { type: 'password', value: '', placeholder: 'Пароль', id: 'password', className: 'form-password' },
+        { type: 'password', value: '', placeholder: 'Повторите пароль', id: 'passwordCheck', className: 'form-password-check' },
+    ],
+    button: {
+        name: 'Изменить пароль',
+        onClick: changePassword,
+        className: 'form-btn-authorization',
+    },
+    subPanel: {
+        textSubPanel: '',
+        textSubLink: '',
+        onClickSubLink: '',
+        },
+    }

@@ -1,3 +1,4 @@
+import { getFormRemeberPassword } from "../../header/log-in/rememberPassword";
 import { createButton } from "../button/button";
 import { createInput } from "../input/index";
 
@@ -23,6 +24,7 @@ export function createForm(typeForm) {
         rememberPassword.innerHTML = 'Забыли пароль?'
         root.append(rememberPassword)
         rememberPassword.className = 'form-rememberPassword'
+        rememberPassword.addEventListener('click', () => getFormRemeberPassword())
     }
 
     root.append(createButton({ label: typeForm.button.name, className: typeForm.button.className, onClick: typeForm.button.onClick }))
@@ -37,7 +39,8 @@ export function createForm(typeForm) {
     const linkSubPanel = document.createElement('span')
     subPanel.append(linkSubPanel)
     linkSubPanel.innerText = typeForm.subPanel.textSubLink
-    linkSubPanel.addEventListener('click', typeForm.subPanel.onClickSubLink)
+    if(typeof typeForm.subPanel.onClickSubLink === 'function'){
+    linkSubPanel.addEventListener('click', typeForm.subPanel.onClickSubLink)}
     linkSubPanel.className = 'form-link-subPanel'
     
     root.append(subPanel)
