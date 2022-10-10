@@ -48,11 +48,13 @@ header {
     outline: none;
 }
 
-.header-container-search input::placeholder {
+.header-container-search input::placeholder,
+.cards-container-grid-card_complain-choice_textaria textarea::placeholder {
     color: #767676;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
+    font-family: 'Inter', sans-serif;
 }
 
 .header-container-search:hover {
@@ -107,7 +109,8 @@ header {
     border-radius: 20px;
 }
 
-.cards-container-grid-card_descr-title {
+.cards-container-grid-card_descr-title,
+.cards-container-grid-card_complain-choice_title {
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
@@ -127,11 +130,13 @@ header {
     margin-top: 5px;
 }
 
-.cards-container-grid-card_descr-user img {
+.cards-container-grid-card_descr-user img,
+.header-container-user img {
     border-radius: 50%;
 }
 
-.cards-container-grid-card_descr-user p {
+.cards-container-grid-card_descr-user p,
+.cards-container-grid-card_complain-choice_common label {
     margin-left: 10px;
     font-size: 18px;
     line-height: 20px;
@@ -251,7 +256,8 @@ form {
     color: #9E9E9E;
 }
 
-.form-btn-authorization {
+.form-btn-authorization,
+.cards-container-grid-card_complain-choice_btn {
     width: 73%;
     border: 2px solid #9D51FE;
     border-radius: 50px;
@@ -265,14 +271,16 @@ form {
     margin-bottom: 15px;
 }
 
-.form-btn-authorization:hover {
+.form-btn-authorization:hover,
+.cards-container-grid-card_complain-choice_btn:hover {
     background-color: #9D51FE;
     color: #fff;
     transition: .3s;
     cursor: pointer;
 }
 
-.form-btn-authorization:focus {
+.form-btn-authorization:focus,
+.cards-container-grid-card_complain-choice_btn:focus {
     background-color: #7000FF;
     border: 2px solid #7000FF;
     transition: .3s;
@@ -308,6 +316,56 @@ form {
     text-align: end;
 }
 
+.cards-container-grid-card_complain {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #111111;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0.7;
+    top: 2%;
+    left: 4%;
+}
+
+.cards-container-grid-card_complain-choice {
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 9px rgba(0, 0, 0, 0.19);
+    width: fit-content;
+}
+
+.cards-container-grid-card_complain-choice_title {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.cards-container-grid-card_complain-choice_common {
+    margin-bottom: 15px;
+}
+
+.cards-container-grid-card_complain-choice_textaria textarea {
+    border-radius: 10px;
+    border: 2px solid #9E9E9E;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #111111;
+    padding: 10px;
+    outline: none;
+}
+
+.cards-container-grid-card_complain-choice_textaria textarea:focus {
+    border: 2px solid #9D51FE;
+}
+
+.cards-container-grid-card_complain-choice_btn {
+    width: 100%;
+}
 
 /* adaptive */
 @media(min-width: 2050px) {
