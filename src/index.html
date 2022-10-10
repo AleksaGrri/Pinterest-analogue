@@ -21,6 +21,12 @@
             <div class="header-container-search">
                 <img src="./img/Search icon.svg" alt="search">
                 <input type="search" id="search" placeholder="Введите ваш запрос">
+                <select name="typeSearch" id="typeSearch">
+                    <option selected value="common">Общий</option>
+                    <option value="tag">По тегу</option>
+                    <option value="description">По описанию</option>
+                    <option value="name">По автору</option>
+                </select>
             </div>
             <div class="header-container-boards" id="dashboards">
                 <select id="boards">
@@ -32,7 +38,7 @@
                 </select>
             </div>
             <div class="header-container-user" id="user-account">
-                <img src="./img/proffile.png" alt="user-photo">
+                <img src="./img/proffile.png" alt="user-photo" id="user-photo">
             </div>
             <div class="header-container-btn">
                 <button class="heaer-container-btn_authorization" id="authorization">Войти</button>

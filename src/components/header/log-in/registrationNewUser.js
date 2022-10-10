@@ -3,12 +3,11 @@ import { checkAuthorization } from "./itemProfile"
 import { URL } from "./requestDataUsers"
 
 
-export function registrationUser(){
+export async function registrationUser(){
     const nameUser = document.getElementById('nameUser').value
     const mailUser = document.getElementById('mailUser').value
     const passwordUser = document.getElementById('password').value
-    console.log(checkRegistrtionForm())
-    if(checkRegistrtionForm()){
+    if(await checkRegistrtionForm()){
         const newUser = {
             email: mailUser,
             password: passwordUser,
@@ -21,7 +20,10 @@ export function registrationUser(){
               },
             body: JSON.stringify(newUser),
         })
-        localStorage.setItem('isAuthorization', true) 
+        
+        localStorage.setItem('isAuthorization', true)
+        localStorage.setItem('Email', mailUser) 
+        localStorage.setItem('Name', nameUser) 
         document.getElementById('form').remove()
         checkAuthorization()
     }

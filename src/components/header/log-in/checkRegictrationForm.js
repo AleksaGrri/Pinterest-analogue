@@ -1,6 +1,7 @@
 import { getUsers } from "./requestDataUsers"
 
-export function checkRegistrtionForm() {
+export async function checkRegistrtionForm() {
+    let isCheck = true
     const nameUser = document.getElementById('nameUser')
     const mailUser = document.getElementById('mailUser')
     const password = document.getElementById('password')
@@ -40,7 +41,8 @@ export function checkRegistrtionForm() {
         passwordCheck.value = ''
         return false
     }
-    return getUsers().then(data => {
+
+    isCheck = await getUsers().then(data => {
         for (const iterator of data) {
             if(iterator.email === mailUser.value){
                 mailUser.placeholder = 'Данный email уже используется'
@@ -48,11 +50,11 @@ export function checkRegistrtionForm() {
                 mailUser.value = ''
                 password.value = ''
                 passwordCheck.value = ''
-                console.log('ошибка')
                 return false
             } else {
                 return true
             }
         }
     })
+    return isCheck
 }

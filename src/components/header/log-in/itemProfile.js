@@ -1,5 +1,5 @@
 import { createForm } from "../../common/form/index";
-import { closeForm } from "./closedFormClick";
+import { getAvatarUser } from "./getAvatarUser";
 import { logInForm } from "./typeForm";
 
 export function checkAuthorization(){
@@ -11,6 +11,7 @@ export function checkAuthorization(){
         button.style.display = 'none'
         profile.style.display = 'block'
         dashboards.style.display = 'block'
+        getAvatarUser()
     } else {
        profile.style.display = 'none'
        dashboards.style.display = 'none'
