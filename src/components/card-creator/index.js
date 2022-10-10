@@ -1,4 +1,4 @@
-
+export { getCards } from "./getCards"
 
 const card = document.getElementById('card')
 const btn = document.getElementById('btn-card')

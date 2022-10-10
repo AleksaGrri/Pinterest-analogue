@@ -1,4 +1,4 @@
-import {printCards} from './printCards'
+import { printCards } from './printCards'
 
 const URL = `https://633c1dc174afaef16402162d.mockapi.io/pinterest-cards-generator`;
 class CardsBase {
@@ -21,7 +21,7 @@ class CardsBase {
 }
 
 export const cardsBase = new CardsBase();
-cardsBase.fetchCards().then(() => printCards(cardsBase.data));
+// cardsBase.fetchCards().then(() => printCards(cardsBase.data));
 cardsBase.fetchCards().then(() => console.log(cardsBase.data));
 
 
