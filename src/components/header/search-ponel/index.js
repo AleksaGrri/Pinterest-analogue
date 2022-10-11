@@ -12,9 +12,10 @@ export async function getResultSearch(){
         if(event.code === 'Enter'){
             updateContent()
             if(search.value){
-            cardsBase.fetchCards().then(() => {
-                if(getCardsForSearch(cardsBase.data)){
-                printCards(getCardsForSearch(cardsBase.data))
+            cardsBase.fetchCards().then(async() => {
+                const array = await getCardsForSearch(cardsBase.data)
+                if(array.length){
+                printCards(array)
                 } else { 
                     errorSearch()
                 }

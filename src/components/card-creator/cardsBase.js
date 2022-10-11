@@ -21,8 +21,8 @@ class CardsBase {
 }
 
 export const cardsBase = new CardsBase();
-// cardsBase.fetchCards().then(() => printCards(cardsBase.data));
-cardsBase.fetchCards().then(() => console.log(cardsBase.data));
+cardsBase.fetchCards().then(() => printCards(cardsBase.data));
+
 
 
 
