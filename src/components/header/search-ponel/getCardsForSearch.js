@@ -1,11 +1,11 @@
-export function getCardsForSearch(data){
+export async function getCardsForSearch(data){
 
     let keywords = document.getElementById('search').value
     keywords = keywords.toLowerCase()
     keywords = keywords.split(' ');
     const resultSearch = [];
     let typeSearch = document.getElementById('typeSearch').value
-    console.log(data)
+    
     if(typeSearch === 'common'){
         for (const iterator of data) {
             let keyCard = iterator.dashboardName.toLowerCase()
@@ -28,6 +28,6 @@ export function getCardsForSearch(data){
             resultSearch.push(iterator)
         }
     }
-
+    
     return resultSearch
 }
