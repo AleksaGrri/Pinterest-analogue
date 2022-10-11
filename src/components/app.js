@@ -8,12 +8,12 @@ import { welcome } from "./welcome";
 
 
 export function App() {
-    // welcome()
+    welcome()
     formLogIn()
     getResultSearch()
     getCards()
     getDashboard()
     getUsersBase()
     profile()
-    
+
 }

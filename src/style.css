@@ -467,6 +467,99 @@ form {
     cursor: pointer;
 }
 
+/* welcome */
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+#main button {
+    margin-top: 20%;
+    padding: 50px 100px;
+    cursor: pointer;
+    border: 2px solid #9d51fe;
+    background-color: #9d51fe;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    border-radius: 20px;
+}
+
+#main button:hover {
+    border: 2px solid #9d51fe;
+    color: #9D51FE;
+    transition: .5s;
+    background-color: #fff;
+}
+
+#main .welcom-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #111;
+    margin-top: 10%;
+    margin-bottom: 30px;
+}
+
+#main div {
+    color: #111;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main .mentor {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 30px;
+}
+
+#main .mentor img {
+    width: 70%;
+    border-radius: 50%;
+}
+
+#main .confucii {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+#main .confucii img {
+    border: 5px solid #111;
+    border-radius: 20px;
+    width: 100%;
+}
+
+#main .confucii div:first-child {
+    width: 70%;
+    margin-right: 20px;
+}
+
+#main .confucii div:last-child {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#main .author {
+    font-size: 24px;
+}
+
 /* adaptive */
 @media(min-width: 2050px) {
     .cards-container-grid {
