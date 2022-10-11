@@ -11,7 +11,7 @@ export function printCards(array) {
 
         const btnSaveBlock = document.createElement('div')
         btnSaveBlock.className = 'cards-container-grid-card_btn'
-        
+
         const btnSave = document.createElement('button')
         btnSave.innerText = 'Сохранить'
         btnSave.style.display = 'none'
@@ -29,7 +29,7 @@ export function printCards(array) {
         })
 
         btnSaveBlock.append(btnSave)
-        
+
         const btnCompaint = document.createElement('div')
         btnCompaint.className = 'cards-container-grid-card_complain'
 
@@ -38,7 +38,7 @@ export function printCards(array) {
     </svg>`
 
         btnCompaint.innerHTML = imageBtnComplaint
-        btnCompaint.addEventListener('click', () => document.body.append(createFormComplaint()))
+        btnCompaint.addEventListener('click', () => card.append(createFormComplaint()))
 
         const cardInner = ` <div class="cards-container-grid-card_image">
          <img src="${array[i].image}" alt="card-image" height="${cardHeight}">

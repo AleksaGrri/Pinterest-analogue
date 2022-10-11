@@ -31,7 +31,8 @@ header {
     gap: 15px;
 }
 
-.header-container-search input {
+.header-container-search input,
+#typeSearch {
     background-color: transparent;
     border: none;
     width: 100%;
@@ -43,9 +44,16 @@ header {
 }
 
 .header-container-search input:focus,
-.header-container-search input:-internal-autofill-selected {
+.header-container-search input:-internal-autofill-selected,
+#typeSearch:focus,
+#typeSearch:-internal-autofill-selected {
     background-color: transparent !important;
     outline: none;
+}
+
+#typeSearch {
+    width: auto;
+    color: #767676;
 }
 
 .header-container-search input::placeholder,
@@ -85,6 +93,26 @@ header {
 .header-container-user img {
     width: 60px;
     height: 60px;
+}
+
+.header-container-btn_authorization {
+    background-color: #111111;
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.header-container-btn_authorization:hover {
+    transition: .3s;
+    box-shadow: 0px 4px 4px rgba(93, 54, 156, 0.422);
+}
+
+.header-container-btn_authorization:focus {
+    background-color: #585260;
 }
 
 .cards-container-grid {
@@ -192,6 +220,16 @@ form {
     line-height: 30px;
     color: #111111;
     margin-bottom: 10px;
+    position: relative;
+    width: 60%;
+    text-align: center;
+}
+
+.form-title div {
+    position: absolute;
+    top: -100%;
+    right: -40%;
+    cursor: pointer;
 }
 
 .form-subTitle {
@@ -329,6 +367,7 @@ form {
     opacity: 0.7;
     top: 2%;
     left: 4%;
+    display: none;
 }
 
 .cards-container-grid-card_complain-choice {
@@ -337,11 +376,22 @@ form {
     border-radius: 20px;
     box-shadow: 0px 0px 20px 9px rgba(0, 0, 0, 0.19);
     width: fit-content;
+    position: absolute;
+    z-index: 111;
+    top: 10%;
+    left: 0;
+    width: 310px;
+    text-align: start;
 }
 
 .cards-container-grid-card_complain-choice_title {
     margin: 0 0 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards-container-grid-card_complain-choice_title div {
+    cursor: pointer;
 }
 
 .cards-container-grid-card_complain-choice_common {
@@ -357,6 +407,7 @@ form {
     color: #111111;
     padding: 10px;
     outline: none;
+    width: -webkit-fill-available;
 }
 
 .cards-container-grid-card_complain-choice_textaria textarea:focus {
@@ -365,6 +416,55 @@ form {
 
 .cards-container-grid-card_complain-choice_btn {
     width: 100%;
+}
+
+.list {
+    list-style-type: none;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 9px rgba(0, 0, 0, 0.19);
+    width: fit-content;
+    position: absolute;
+    z-index: 111;
+    top: 8%;
+    right: 8%;
+}
+
+.list button {
+    border: 2px solid #111111;
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #111;
+    font-weight: 700;
+    background-color: #fff;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.list button:hover {
+    background-color: #424045;
+    color: #fff;
+    transition: .3s;
+}
+
+.list li:last-child button {
+    border: 2px solid #9D51FE;
+    color: #9D51FE;
+    margin-bottom: 0;
+}
+
+.list li:last-child button:hover {
+    background-color: #bf95f6;
+    color: #ffffff;
+}
+
+.list div {
+    text-align: end;
+    width: 100%;
+    cursor: pointer;
 }
 
 /* adaptive */
@@ -454,6 +554,22 @@ form {
     }
 }
 
+@media(max-width: 700px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header-container-boards,
+    .header-container-search {
+        width: 70%;
+    }
+
+    .list {
+        top: 13%;
+    }
+}
+
 @media(max-width: 650px) {
     .cards-container-grid {
         column-count: 2;
@@ -505,5 +621,17 @@ form {
     form {
         width: 77%;
         right: 4%;
+    }
+
+    .cards-container-grid-card_complain-choice {
+        left: -10%;
+    }
+}
+
+@media(max-width: 410px) {
+
+    .header-container-boards,
+    .header-container-search {
+        width: 55%;
     }
 }
