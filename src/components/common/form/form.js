@@ -9,7 +9,7 @@ export function createForm(typeForm) {
     elementTitle.innerText = typeForm.title;
     root.append(elementTitle);
     elementTitle.className = 'form-title';
-
+    
     const elementSubTitle = document.createElement('div');
     elementSubTitle.innerText = typeForm.subTitle;
     root.append(elementSubTitle);

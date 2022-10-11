@@ -9,7 +9,7 @@ export function getDashboard() {
 
     getCards().then(data => {
         for (let index = 0; index < data.length; index++) {
-            console.log(data[index].dashboardName)
+            
             let dashName = data[index].dashboardName;
 
             if (dashName === optionName) {
