@@ -8,7 +8,7 @@ import { welcome } from "./welcome";
 
 
 export function App() {
-    // welcome()
+    welcome()
     formLogIn()
     getCards()
     cardsBase
