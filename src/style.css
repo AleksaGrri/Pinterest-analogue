@@ -473,11 +473,11 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 #main button {
-    margin-top: 20%;
+    margin-top: 15%;
     padding: 50px 100px;
     cursor: pointer;
     border: 2px solid #9d51fe;
@@ -500,7 +500,7 @@ form {
     font-size: 50px;
     font-weight: 600;
     color: #111;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 30px;
 }
 
@@ -535,7 +535,7 @@ form {
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 #main .confucii img {

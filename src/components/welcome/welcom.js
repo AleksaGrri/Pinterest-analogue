@@ -39,32 +39,33 @@ export function show() {
         }, 6000)
         setTimeout(() => {
             deleteAll()
-        }, 120000)
+        }, 10000)
     }
 
 
     function secondSlide() {
 
-    setTimeout(() => {
-        const mentor = document.createElement('div')
-        const image = document.createElement('div')
-        const imagePicture = document.createElement('img')
-        imagePicture.src = "https://drive.google.com/uc?export=view&id=1Bs03amtEERn_Q_Wjsm7Go6X9vIoEwrVr"
-        image.append(imagePicture)
-        mentor.append(image)
-        setTimeout(()=>{
-            const text = document.createElement('div')
-            text.innerText = '<---- Вот этот парень нас учил'
-            mentor.append(text)
-            main.append(mentor)},1000)
-    },6000)
-    setTimeout(() => {
-deleteAll()
-    },12000)
- }
- 
- 
-function secondSlide(){
+        setTimeout(() => {
+            const mentor = document.createElement('div')
+            const image = document.createElement('div')
+            const imagePicture = document.createElement('img')
+            imagePicture.src = "https://drive.google.com/uc?export=view&id=1Bs03amtEERn_Q_Wjsm7Go6X9vIoEwrVr"
+            image.append(imagePicture)
+            mentor.append(image)
+            setTimeout(() => {
+                const text = document.createElement('div')
+                text.innerText = '<---- Вот этот парень нас учил'
+                mentor.append(text)
+                main.append(mentor)
+            }, 1000)
+        }, 6000)
+        setTimeout(() => {
+            deleteAll()
+        }, 8000)
+    }
+
+
+    function secondSlide() {
         const quote = 'Код может быть и некрасив, но он работает, как задумал автор, а если думаешь, что код не работает, то с чего ты взял, что так не задумал автор?'
         const quoteDiv = document.createElement('div')
         const mainconf = document.createElement('div')
@@ -101,7 +102,7 @@ function secondSlide(){
                 quoteDiv.append(author)
             }, 9000)
 
-        }, 1000)
+        }, 50)
 
     }
 
@@ -113,6 +114,6 @@ function secondSlide(){
         const main = document.getElementById('main')
         hidden()
         main.remove()
-    }, 3000000)
+    }, 30000)
 }
 

@@ -4,6 +4,7 @@ import { itemMenu } from "./itemMenu"
 export function createMenu() {
     const menu = document.createElement('ul')
     menu.className = 'list'
+    menu.id = 'menu'
 
     const close = document.createElement('div')
     close.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
